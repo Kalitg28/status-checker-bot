@@ -1,8 +1,8 @@
 {
     "name": "Bot_Status_Checker",
     "logo": "https://telegra.ph/file/0960934f84c68407947de.jpg",
-    "description": "Easy & powerful bot to check if all your Telegram bots are working or not. This bot status checker updates every 45 minutes and runs 24x7.",
-    "repository": "https://github.com/SPARKBRO/Bot-sts",
+    "description": "Easy & powerful bot to check if all your Telegram bots are working or not. This bot status checker updates every 15 minutes and runs 24x7.",
+    "repository": "https://github.com/SPARKBRO/status-checker-bot",
     "keywords": [
         "BotStatus",
         "Check if your bots are alive or not",
@@ -25,6 +25,10 @@
             "required": true
         },
         "BOT_LIST": {
+            "description": "List of your bot usernames without '@' (Example: bot1 bot2 bot3). Separate each username with a space.",
+            "required": true
+        },
+        "BOT_LIST1": {
             "description": "List of your bot usernames without '@' (Example: bot1 bot2 bot3). Separate each username with a space.",
             "required": true
         },
