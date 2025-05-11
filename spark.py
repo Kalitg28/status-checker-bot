@@ -27,7 +27,7 @@ BOT_ADMIN_IDS = list(map(int, os.getenv("BOT_ADMIN_IDS", "").split(",")))
 async def check_bot_status():
     while True:
         print("Checking...")
-        xxx_spark = f"**1️⃣ | 𝗣𝗨𝗕𝗟𝗜𝗖 𝗕𝗢𝗧 𝗟𝗜𝗦𝗧**"
+        xxx_spark = f"**<blockquote>〘 🇮🇳 𝐈𝐧𝐝𝐢𝐚𝐧 𝐌𝐕 🇮🇳〙-  𝗕𝗢𝗧 𝗟𝗜𝗦𝗧**</blockquote>"
         
         # Checking first bot list (BOT_LIST)
         for bot in BOT_LIST:
@@ -58,7 +58,7 @@ async def check_bot_status():
 
         # Added section for bot list 1 (BOT_LIST1)
         if BOT_LIST1:
-            xxx_spark += "\n\n\n\n**2️⃣ | 𝗣𝗘𝗥𝗦𝗢𝗡𝗔𝗟 𝗕𝗢𝗧 𝗟𝗜𝗦𝗧**"  # New title for the second list
+            xxx_spark += "\n\n**🧑🏻‍💻 Bot Creator :**"  # New title for the second list
             for bot in BOT_LIST1:
                 try:
                     yyy_spark = await app.send_message(bot, "/start")
@@ -88,7 +88,7 @@ async def check_bot_status():
         # Time and message formatting
         time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
         last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-        xxx_spark += f"\n\n\n\n\n__⏳ Last checked on: {last_update}\n🌐{TIME_ZONE}__\n\n**__♻️ Refreshes Every 15 Minutes Automatically...__**"
+        xxx_spark += f"\n\n<blockquote>__⏳ Last checked on: {last_update}__</blockquote>\n\n**<blockquote>__♻️ Refreshes Every 15 Minutes Automatically...__**</blockquote>"
         await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_spark)
         print(f"Last checked on: {last_update}")
         await asyncio.sleep(900) #Default 15 minutes, Add yours 
