@@ -44,7 +44,7 @@ async def check_bot_status():
                     xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} ❄️\n        └ Down ❌__**</blockquote>"
                     for bot_admin_id in BOT_ADMIN_IDS:
                         try:
-                            await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @SPA4KBRO ⚡__**")
+                            await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @Indian_MV ⚡__**")
                         except Exception:
                             pass
                     await app.read_chat_history(bot)
@@ -73,7 +73,7 @@ async def check_bot_status():
                         xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} 🔥\n        └ Down ❌__**</blockquote>"
                         for bot_admin_id in BOT_ADMIN_IDS:
                             try:
-                                await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker, Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @SPA4KBRO ⚡__**")
+                                await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker, Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @Indian_MV ⚡__**")
                             except Exception:
                                 pass
                         await app.read_chat_history(bot)
