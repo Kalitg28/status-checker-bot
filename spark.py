@@ -41,7 +41,7 @@ async def check_bot_status():
                 if aaa == bbb:
                     bot_name = (await app.get_chat(bot)).first_name
                     bot_username = f"@{bot}"
-                    xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} ❄️\n        └ Down ❌__**</blockquote>"
+                    xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} \n        └ Down ❌__**</blockquote>"
                     for bot_admin_id in BOT_ADMIN_IDS:
                         try:
                             await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @Indian_MV ⚡__**")
@@ -51,14 +51,14 @@ async def check_bot_status():
                 else:
                     bot_name = (await app.get_chat(bot)).first_name
                     bot_username = f"@{bot}"
-                    xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} ❄️\n        └ Alive ✅__**</blockquote>"
+                    xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} \n        └ Alive ✅__**</blockquote>"
                     await app.read_chat_history(bot)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
 
         # Added section for bot list 1 (BOT_LIST1)
         if BOT_LIST1:
-            xxx_spark += "\n\n**🧑🏻‍💻 Bot Creator :**"  # New title for the second list
+            xxx_spark += "**__**"  # New title for the second list
             for bot in BOT_LIST1:
                 try:
                     yyy_spark = await app.send_message(bot, "/start")
@@ -70,7 +70,7 @@ async def check_bot_status():
                     if aaa == bbb:
                         bot_name = (await app.get_chat(bot)).first_name
                         bot_username = f"@{bot}"
-                        xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} 🔥\n        └ Down ❌__**</blockquote>"
+                        xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} \n        └ Down ❌__**</blockquote>"
                         for bot_admin_id in BOT_ADMIN_IDS:
                             try:
                                 await app.send_message(int(bot_admin_id), f"ALERT ⚠️!!\n\nHi Bro This Message From Status checker, Your bot :- **{bot_name}** is down💀** ❌\n\n**__powered by : @Indian_MV ⚡__**")
@@ -80,7 +80,7 @@ async def check_bot_status():
                     else:
                         bot_name = (await app.get_chat(bot)).first_name
                         bot_username = f"@{bot}"
-                        xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} 🔥\n        └ Alive ✅__**</blockquote>"
+                        xxx_spark += f"\n\n<blockquote>**__🤖 {bot_name} |  {bot_username} \n        └ Alive ✅__**</blockquote>"
                         await app.read_chat_history(bot)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
@@ -88,7 +88,7 @@ async def check_bot_status():
         # Time and message formatting
         time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
         last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-        xxx_spark += f"\n\n<blockquote>__⏳ Last checked on: {last_update}__</blockquote>\n\n**<blockquote>__♻️ Refreshes Every 15 Minutes Automatically...__**</blockquote>"
+        xxx_spark += f"\n\n<blockquote>__⏳ Last checked on ⏰ \n        └{last_update}__</blockquote>\n\n**<blockquote>__♻️ Refreshes Every 15 Minutes Automatically...__**</blockquote>"
         await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_spark)
         print(f"Last checked on: {last_update}")
         await asyncio.sleep(900) #Default 15 minutes, Add yours 
